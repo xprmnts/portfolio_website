@@ -49,6 +49,7 @@ nav {
 	transition: all 600ms ease;
 	position: relative;
 	z-index: 1;
+	visibility: hidden;
 }
 /*
 END SECTION: HEADER AND NAV;
@@ -60,6 +61,7 @@ START SECTION: STYLING LINKS & TEXT
 	text-decoration: none;
 	font-weight: 400;
 	color:rgba(150,150,150,1);
+	visibility: visible;
 }
 
 #logo a:hover {
@@ -104,6 +106,7 @@ nav {
 #hamburger{
   flex:1 0 auto;
   padding: 10px;
+  visibility: visible;
 }
 .bar1, .bar2{
 	margin-left: 80%;
@@ -136,6 +139,8 @@ header nav ul li{
   height:100vh;
   background-color: black;
   opacity:1;
+  visibility: visible;
+  transition: all 600ms ease;
 }
 /*
 END SECTION: POSITIONING NAV ELEMENTS - Mobile First
