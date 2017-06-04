@@ -1,16 +1,14 @@
-
 /*
 #######################################################################
                           Global Properties
 #######################################################################
 */
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-html, body{
-
+html, body {
     background-color: #ccc;
     font-family: 'Helvetica Neue', 'Helvetica', 'Arial', 'san-serif';
     font-weight: 200;
@@ -23,18 +21,17 @@ html, body{
 /*
             START SECTION: DRAWING THE HAMBURGER ICON
 */
-.bar1, .bar2{
+.bar1, .bar2 {
     width: 20px;
     height: 1px;
     background-color: #fff;
     margin: 6px 0;
     transition: 400ms;
 }
-.change .bar1{
+.change .bar1 {
     -webkit-transform: rotate(-45deg);
     transform: rotate(45deg)translate(0px, 5px);
 }
-
 .change .bar2 {
     -webkit-transform: rotate(45deg) translate(5px, 5px);
     transform: rotate(-45deg)translate(0px, -5px);
@@ -42,14 +39,12 @@ html, body{
 /*
         END SECTION: DRAWING THE HAMBURGER ICON
 */
-
-header{
+header {
     height: 40px;
-    background-color: rgba(5, 5, 5,1);
+    background-color: rgba(5, 5, 5, 1);
     position: fixed;
     width: 100%;
 }
-
 nav {
     display: flex;
     height: inherit;
@@ -60,94 +55,86 @@ nav {
     z-index: 1;
     visibility: hidden;
 }
-
 /*
             START SECTION: STYLING LINKS & TEXT
 */
-#logo a{
+#logo a {
     text-decoration: none;
     font-weight: 400;
-    color:rgba(225,225,225,1);
+    color: rgba(225, 225, 225, 1);
     visibility: visible;
 }
-
 #logo a:hover {
-    color:rgba(255,255,255,1);
+    color: rgba(255, 255, 255, 1);
 }
-
-.navlist a{
+.navlist a {
     text-decoration: none;
-    color:rgba(225,225,225,1);
+    color: rgba(225, 225, 225, 1);
     font-weight: 400;
     font-size: 14px;
 }
-
 .navlist a:hover {
-    color:rgba(255,255,255,1);
+    color: rgba(255, 255, 255, 1);
 }
-
 /*
         END SECTION: STYLING LINKS & TEXT
 */
-
 /*
         START SECTION: POSITIONING NAV ELEMENTS - Mobile First
 */
 nav {
     flex-direction: column;
 }
-.masthead{
-  display:flex;
-  flex-direction: row;
-  align-items: center;
-  flex: 0 0 auto;
+.masthead {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex: 0 0 auto;
 }
-#logo{
-  flex:1 0 auto;
-  height: 40px;
-  line-height: 40px;
+#logo {
+    flex: 1 0 auto;
+    height: 40px;
+    line-height: 40px;
 }
-#logo a{
+#logo a {
     margin-left: 10%;
 }
-#hamburger{
-  flex:1 0 auto;
-  padding: 10px;
-  visibility: visible;
+#hamburger {
+    flex: 1 0 auto;
+    padding: 10px;
+    visibility: visible;
 }
-.bar1, .bar2{
+.bar1, .bar2 {
     margin-left: 80%;
 }
-.navlist{
-  display: flex;
-  list-style:none;
-  padding: 25px 50px;
-  flex-direction: column;
-  flex: 1 0 auto;
+.navlist {
+    display: flex;
+    list-style: none;
+    padding: 25px 50px;
+    flex-direction: column;
+    flex: 1 0 auto;
+}
+header nav ul li {
+    border-bottom: 1px solid #ccc;
+    margin: 15px 0px;
+    padding-bottom: 5px;
+    opacity: 0;
+    transform: rotateX(60deg) translate(0px, -125px);
+    visibility: hidden;
+    transition: transform 600ms ease-out;
+}
+.responsive {
+    visibility: visible;
+    opacity: 1;
+    transform: rotateX(0deg) translate(0px, 0px);
+}
+.show {
+    height: 100vh;
+    background-color: black;
+    opacity: 1;
+    visibility: visible;
 }
 
-header nav ul li{
-  border-bottom: 1px solid #ccc;
-  margin:15px 0px;
-  padding-bottom: 5px;
-  opacity:0;
-  transform:rotateX(60deg) translate(0px,-125px);
-  visibility: hidden;
-  transition: transform 600ms ease-out;
-}
-
-.responsive{
-  visibility:visible;
-  opacity:1;
-  transform:rotateX(0deg) translate(0px,0px);
-}
-
-.show{
-  height:100vh;
-  background-color: black;
-  opacity:1;
-  visibility: visible;
-}
 /*
         END SECTION: POSITIONING, STYLE & ANIMATION - Mobile First
 */
@@ -155,7 +142,7 @@ header nav ul li{
 /*
         START SECTION: POSITIONING, STYLE & ANIMATION - Non-Mobile
 */
-@media(min-width:500px){
+@media(min-width:500px) {
     nav {
         flex-direction: row;
         flex-wrap: nowrap;
@@ -165,17 +152,15 @@ header nav ul li{
         flex: 1 0 auto;
         align-items: center;
     }
-
     #logo {
         flex-grow: 1;
         margin-left: 10%;
     }
-
     #hamburger {
         flex-grow: 1;
         display: none;
     }
-    .navlist{
+    .navlist {
         display: flex;
         list-style: none;
         padding: 0px;
@@ -185,25 +170,24 @@ header nav ul li{
         align-items: center;
         flex-direction: row;
     }
-    header nav ul li{
+    header nav ul li {
         border: none;
     }
-    #logo a{
-        color:rgba(150,150,150,1);
+    #logo a {
+        color: rgba(150, 150, 150, 1);
     }
-
-
-    .navlist a{
-        color:rgba(150,150,150,1);
+    .navlist a {
+        color: rgba(150, 150, 150, 1);
         font-weight: 200;
     }
 }
 /*
         END SECTION: POSITIONING, STYLE & ANIMATION - Non-Mobile
 */
+
 /*
 #######################################################################
-MAIN FEAUTURE & PROJECT STORY STYLING
+                MAIN FEAUTURE & PROJECT STORY STYLING
 #######################################################################
 */
 .feature {
@@ -214,12 +198,10 @@ MAIN FEAUTURE & PROJECT STORY STYLING
     overflow: hidden;
     display: flex;
 }
-#trailr{
-    background:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url("../img/trailr_small.jpg") no-repeat border-box center bottom;
-
+#trailr {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url("../img/trailr_small.jpg") no-repeat border-box center bottom;
     background-size: cover;
 }
-
 .project {
     margin: 0 auto;
     background-color: white;
@@ -228,128 +210,122 @@ MAIN FEAUTURE & PROJECT STORY STYLING
     min-height: 144px;
     margin: 1px;
 }
-.feature-content{
-    margin: auto; 
+.feature-content {
+    margin: auto;
     flex-direction: column;
     width: 100%;
 }
-.project-content{
+.project-content {
     margin: auto;
 }
-.feature-title, .project-title{
+.feature-title, .project-title {
     text-align: center;
     margin: 5px;
 }
-.feature-links, .project-links{
+.feature-links, .project-links {
     text-align: center;
     margin: 5px;
 }
-.repo-link{
+.repo-link {
     padding-right: 10px;
 }
-.demo-link{
+.demo-link {
     padding-left: 10px;
 }
-#catalog{
-    background:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)),  url("../img/books.jpg") no-repeat border-box center;
+#catalog {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url("../img/books.jpg") no-repeat border-box center;
     background-size: 100%;
 }
-#map{
-    background:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url("../img/map.jpg") no-repeat border-box center;
+#map {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url("../img/map.jpg") no-repeat border-box center;
     background-size: 100%;
 }
-#space-ship{
-    background:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url("../img/space.jpg") no-repeat border-box center;
+#space-ship {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url("../img/space.jpg") no-repeat border-box center;
     background-size: 100%;
 }
-
-#potato-gun{
-    background:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url("../img/time.jpg") no-repeat border-box center;
+#potato-gun {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url("../img/time.jpg") no-repeat border-box center;
     background-size: 100%;
 }
 h1, h3 {
     color: white;
 }
-
 section a {
     text-decoration: none;
     color: white;
     line-height: 40px;
 }
-
 /*
         Footer Styling
 */
-
-footer{
+footer {
     line-height: 30px;
     font-size: 12px;
     text-align: center;
     color: #fff;
 }
+
 /*
 #######################################################################
         Media Queries to handle image & content responsive ness
 #######################################################################
 */
-@media 
-only screen and (min-width: 540px){ 
+@media
+only screen and (min-width:540px) {
     .feature {
         height: calc(100vh - 200px);
     }
-    #trailr{
-        background:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url("../img/trailr_medium.jpg") no-repeat border-box center bottom;
-        background-size:cover;
+    #trailr {
+        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url("../img/trailr_medium.jpg") no-repeat border-box center bottom;
+        background-size: cover;
     }
-    .project-views{
+    .project-views {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
     }
-    .project{
+    .project {
         width: calc(100vw/2 - 10px);
-        flex:1 0 auto;
-    }
-    }
-
-@media 
-only screen and (min-width: 1025px){ 
-    .feature {
-        height: calc(100vh - 100px);
-    }
-    #trailr{
-        background:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url("../img/trailr_large.jpg") no-repeat border-box center bottom;
-        background-size:cover;
-    }
-    .project-views{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-    .project{
-        width: calc(100vw/4 - 6px);
-        flex:1 0 auto;
+        flex: 1 0 auto;
     }
 }
-
-@media 
-only screen and (min-width: 1440px){ 
+@media
+only screen and (min-width:1025px) {
     .feature {
         height: calc(100vh - 100px);
     }
-    #trailr{
-        background:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url("../img/trailr_large.jpg") no-repeat border-box center bottom;
-        background-size:cover;
+    #trailr {
+        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url("../img/trailr_large.jpg") no-repeat border-box center bottom;
+        background-size: cover;
     }
-    .project-views{
+    .project-views {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .project {
+        width: calc(100vw/4 - 6px);
+        flex: 1 0 auto;
+    }
+}
+@media
+only screen and (min-width:1440px) {
+    .feature {
+        height: calc(100vh - 100px);
+    }
+    #trailr {
+        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url("../img/trailr_large.jpg") no-repeat border-box center bottom;
+        background-size: cover;
+    }
+    .project-views {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
     }
-    .project{
+    .project {
         width: calc(1440px/4 - 6px);
-        flex:none;
+        flex: none;
     }
-
 }
