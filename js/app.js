@@ -22,7 +22,7 @@ $(document).ready(function() {
 });
 
 function checkSize(){
-  if ($(window).width() <= 480){
+  if ($(window).width() < 499){
     if($('li').hasClass('responsive')){
       $('li').removeClass('responsive');
     }
@@ -32,45 +32,11 @@ function checkSize(){
 	    $('nav').toggleClass('show');
 	});
   }
-  if ($(window).width() > 480){
+  if ($(window).width() >= 500){
     if(!$('li').hasClass('responsive')){
       $('li').addClass('responsive');
     }
 	}
 }
 
-/*
-Based on the nav link clicked smooth scroll to its
-div position
-*/
 
-
-$('.btn').click(function(evt){
-    evt.preventDefault();
-    $('.btn').css('color','rgba(180,180,180,0.5)');
-    $('.btn').val('Sent');
-});
-
-$( '#a' ).click( function( evt ) {
-    $('html, body').animate({
-        scrollTop: $('#thoughts').offset().top
-    }, 1000);
-});
-
-$( '#b' ).click( function( evt ) {
-    $('html, body').animate({
-        scrollTop: $('#resources').offset().top
-    }, 1000);
-});
-
-$( '#c' ).click( function( evt ) {
-    $('html, body').animate({
-        scrollTop: $('#projects').offset().top
-    }, 1000);
-});
-
-$( '#d' ).click( function( evt ) {
-    $('html, body').animate({
-        scrollTop: $('#contact').offset().top
-    }, 1000);
-});
