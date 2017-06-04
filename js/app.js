@@ -22,7 +22,7 @@ $(document).ready(function() {
 });
 
 function checkSize(){
-  if ($(window).width() < 499){
+  if ($(window).width() < 500){
     if($('li').hasClass('responsive')){
       $('li').removeClass('responsive');
     }

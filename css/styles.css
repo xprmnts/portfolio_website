@@ -1,3 +1,9 @@
+
+/*
+#######################################################################
+                          Global Properties
+#######################################################################
+*/
 *{
     box-sizing: border-box;
     margin: 0;
@@ -11,42 +17,11 @@ html, body{
 }
 /*
 #######################################################################
-HEADER AND NAV SYTLING
+                          HEADER AND NAV
 #######################################################################
 */
-/*header{
-    background-color: black;
-    width: 100%;
-    min-height: 40px;
-    position: fixed;
-    opacity: 0.7;
-}
-nav{
-    max-width: 960px;
-    margin: auto;
-}
-.masthead{
-    height: 40px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-h1,h3{
-    color: white;
-}
-#logo {
-    margin-left: 20px; 
-}
-#title {
-    margin-right: 20px; 
-}
-
-*/
 /*
-START SECTION: BOX MODEL, FONT, MARGINS AND PADDING
-*/
-/*
-START SECTION: DRAWING THE HAMBURGER ICON
+            START SECTION: DRAWING THE HAMBURGER ICON
 */
 .bar1, .bar2{
     width: 20px;
@@ -65,12 +40,9 @@ START SECTION: DRAWING THE HAMBURGER ICON
     transform: rotate(-45deg)translate(0px, -5px);
 }
 /*
-END SECTION: DRAWING THE HAMBURGER ICON
+        END SECTION: DRAWING THE HAMBURGER ICON
 */
 
-/*
-START SECTION: HEADER AND NAV;
-*/
 header{
     height: 40px;
     background-color: rgba(5, 5, 5,1);
@@ -88,11 +60,9 @@ nav {
     z-index: 1;
     visibility: hidden;
 }
+
 /*
-END SECTION: HEADER AND NAV;
-*/
-/*
-START SECTION: STYLING LINKS & TEXT
+            START SECTION: STYLING LINKS & TEXT
 */
 #logo a{
     text-decoration: none;
@@ -117,11 +87,11 @@ START SECTION: STYLING LINKS & TEXT
 }
 
 /*
-END SECTION: STYLING LINKS & TEXT
+        END SECTION: STYLING LINKS & TEXT
 */
 
 /*
-START SECTION: POSITIONING NAV ELEMENTS - Mobile First
+        START SECTION: POSITIONING NAV ELEMENTS - Mobile First
 */
 nav {
     flex-direction: column;
@@ -179,11 +149,11 @@ header nav ul li{
   visibility: visible;
 }
 /*
-END SECTION: POSITIONING NAV ELEMENTS - Mobile First
+        END SECTION: POSITIONING, STYLE & ANIMATION - Mobile First
 */
 
 /*
-START SECTION: POSITIONING NAV ELEMENTS - Non-Mobile
+        START SECTION: POSITIONING, STYLE & ANIMATION - Non-Mobile
 */
 @media(min-width:500px){
     nav {
@@ -229,7 +199,7 @@ START SECTION: POSITIONING NAV ELEMENTS - Non-Mobile
     }
 }
 /*
-END SECTION: POSITIONING NAV ELEMENTS - Non-Mobile
+        END SECTION: POSITIONING, STYLE & ANIMATION - Non-Mobile
 */
 /*
 #######################################################################
@@ -244,7 +214,6 @@ MAIN FEAUTURE & PROJECT STORY STYLING
     overflow: hidden;
     display: flex;
 }
-
 #trailr{
     background:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url("../img/trailr_small.jpg") no-repeat border-box center bottom;
 
@@ -307,13 +276,22 @@ section a {
     color: white;
     line-height: 40px;
 }
+
+/*
+        Footer Styling
+*/
+
 footer{
     line-height: 30px;
     font-size: 12px;
     text-align: center;
     color: #fff;
 }
-
+/*
+#######################################################################
+        Media Queries to handle image & content responsive ness
+#######################################################################
+*/
 @media 
 only screen and (min-width: 540px){ 
     .feature {
